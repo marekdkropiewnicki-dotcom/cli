@@ -32,12 +32,13 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 ## Copilot Setup
 
 - **Plan:** Copilot Pro+
-- **Premium requests:** ~50% wykorzystane (reset 1. dnia miesiąca)
+- **Premium requests:** ~49.8% wykorzystane (reset 1. dnia miesiąca)
 - **Coding agents:** Copilot ✅ Claude ✅ Codex ✅
 - **Automatic code review:** ✅ Enabled
 - **Copilot Memory:** ✅ Enabled
 - **MCP servers:** ✅ Enabled
 - **Copilot Spaces:** ✅ Enabled (wymaga VSCode — na razie pomijamy)
+- **AI model training:** ❌ Disabled (świadoma decyzja prywatności)
 
 ## Setup (iPhone iOS)
 
@@ -45,6 +46,7 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 - **Working Copy** — Git (commit, push, pull)
 - **Textastic** — edytor kodu
 - **Brave** — przeglądarka
+- ⚠️ GitHub app czasem wyrzuca sesję — po powrocie wracamy do `cli` repo jako kontekst
 
 ## Zasady współpracy
 
@@ -62,3 +64,7 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 - Aktywny projekt: GeNCorE (PR #7 otwarty — Fix GeNCorE naming, HF 410, voice routing)
 - Skonfigurowano Copilot Pro+: coding agents (Copilot + Claude + Codex), automatic code review, Memory, MCP
 - Copilot Spaces — pomijamy (wymaga VSCode, nie dostępne na iOS)
+- Sprawdzono wszystkie ustawienia Copilot — wszystko ✅ Enabled
+- AI model training — ❌ Disabled (świadoma decyzja)
+- Premium requests: 49.8% wykorzystane
+- GitHub app wyrzuca sesję — dodano notatkę do Setup
