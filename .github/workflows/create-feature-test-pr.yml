@@ -1,0 +1,31 @@
+name: Create PR from feature/test to trunk
+
+on:
+  push:
+    branches:
+      - 'copilot/add-test-line-to-readme-another-one'
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create PR from feature/test to trunk
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr create \
+            --repo ${{ github.repository }} \
+            --head feature/test \
+            --base trunk \
+            --title "Testowa zmiana README z iPhone" \
+            --body "Dodaje drugą testową linię w README z iPhone.
+          Brak zmian w kodzie." \
+          || echo "PR already exists or could not be created"
+          gh pr ready \
+            --repo ${{ github.repository }} \
+            feature/test \
+          || echo "PR ready status update skipped"
