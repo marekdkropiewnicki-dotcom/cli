@@ -160,5 +160,4 @@ Avoid:
 - Copilot-generated commit messages — ✅ Enabled
 - Pełny arsenał iOS apps: GitHub, Working Copy, Textastic, Shellfish, Railway app, Code, FTP Servers, S3 Servers, Source Remote, Station, Brave
 - Railway app + Shellfish = dostęp do Railway bez MCP ✅
-
-Commit message: "Update Copilot instructions - full iOS apps setup"
+- Usunięto błędną linię z commit message wklejoną przez Claude Opus
