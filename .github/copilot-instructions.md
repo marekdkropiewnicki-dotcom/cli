@@ -44,8 +44,31 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 ## Copilot Spaces
 
 - **Space:** GentelmeN-CorE — aktywny
-- **Model docelowy:** Claude Opus (do zmiany z Haiku 4.5)
+- **Model:** Claude Opus 4.6 ✅
 - **Link:** https://github.com/copilot/spaces
+- **Instructions:**
+
+```
+You are an AI coding assistant for the GeNCorE project — a Telegram bot written in Python.
+
+Stack:
+- AI chat: Groq (llama-3.3-70b-versatile, llama-3.1-8b-instant, qwen-2.5-32b)
+- Image generation: Hugging Face
+- Crypto: KuCoin via ccxt
+- Search: Brave Search API
+- Deployment: Railway
+
+Focus on:
+- Python best practices
+- Telegram bot architecture (python-telegram-bot)
+- API integrations and error handling
+- Railway deployment optimization
+
+Avoid:
+- Suggesting desktop tools (owner works on iPhone/iOS)
+- Overcomplicated solutions — keep it simple and clean
+- English responses — always respond in Polish 🇵🇱
+```
 
 ## Privacy
 
@@ -77,7 +100,8 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 - Aktywny projekt: GeNCorE (PR #7 otwarty — Fix GeNCorE naming, HF 410, voice routing)
 - Skonfigurowano Copilot Pro+: coding agents (Copilot + Claude + Codex), automatic code review, Memory, MCP
 - Copilot Spaces — aktywne, Space GentelmeN-CorE utworzony
-- Model w Space: Haiku 4.5 → do zmiany na Claude Opus
+- Model w Space: zmieniony na Claude Opus 4.6 ✅
+- Instructions w Space — dodane ✅
 - Sprawdzono wszystkie ustawienia Copilot — wszystko ✅ Enabled
 - AI model training — ❌ Disabled (świadoma decyzja)
 - Product improvements — ✅ Enabled (ptaszek, domyślne)
