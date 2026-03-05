@@ -19,17 +19,19 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          set -e
           # Check if PR already exists
           EXISTING=$(gh pr list --repo "${{ github.repository }}" \
             --head feature/test --base trunk --state open --json number --jq '.[0].number' 2>/dev/null || echo "")
           if [ -z "$EXISTING" ]; then
+            PR_BODY="Dodaje drugą testową linię w README z iPhone.
+          Brak zmian w kodzie."
             gh pr create \
               --repo "${{ github.repository }}" \
               --head feature/test \
               --base trunk \
               --title "Testowa zmiana README z iPhone" \
-              --body "Dodaje drugą testową linię w README z iPhone.
-          Brak zmian w kodzie."
+              --body "$PR_BODY"
             echo "PR created successfully"
           else
             echo "PR already exists: #$EXISTING"
