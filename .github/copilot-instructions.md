@@ -40,6 +40,12 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 - **Copilot Spaces:** ✅ Enabled (wymaga VSCode — na razie pomijamy)
 - **AI model training:** ❌ Disabled (świadoma decyzja prywatności)
 
+## Privacy
+
+- **Suggestions matching public code:** ✅ Allowed
+- **Allow data for product improvements:** ✅ Enabled (ptaszek — domyślne)
+- **Allow data for AI model training:** ❌ Disabled (świadoma decyzja)
+
 ## Setup (iPhone iOS)
 
 - **GitHub app + Copilot Pro+** — przeglądanie repo, Copilot Chat
@@ -66,5 +72,6 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 - Copilot Spaces — pomijamy (wymaga VSCode, nie dostępne na iOS)
 - Sprawdzono wszystkie ustawienia Copilot — wszystko ✅ Enabled
 - AI model training — ❌ Disabled (świadoma decyzja)
+- Product improvements — ✅ Enabled (ptaszek, domyślne)
 - Premium requests: 49.8% wykorzystane
 - GitHub app wyrzuca sesję — dodano notatkę do Setup
