@@ -45,6 +45,7 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 
 - **Space:** GentelmeN-CorE — aktywny
 - **Model:** Claude Opus 4.6 ✅
+- **Sources:** do dodania ręcznie — `marekdkropiewnicki-dotcom/GentelmeN-CorE`
 - **Link:** https://github.com/copilot/spaces
 - **Instructions:**
 
@@ -69,6 +70,15 @@ Avoid:
 - Overcomplicated solutions — keep it simple and clean
 - English responses — always respond in Polish 🇵🇱
 ```
+
+## MCP Servers
+
+- **GitHub MCP** — oficjalny MCP od GitHuba ✅ Enabled w ustawieniach
+  - Repo: https://github.com/github/mcp-server
+  - Daje Copilotowi dostęp do GitHub API (repo, issues, PR)
+  - Do skonfigurowania w Space → **Install MCP**
+- **Railway MCP** — do podłączenia (deployment, logi) ⏳ TODO
+- **Copilot API** — brak publicznego API ❌
 
 ## Privacy
 
@@ -102,6 +112,9 @@ Avoid:
 - Copilot Spaces — aktywne, Space GentelmeN-CorE utworzony
 - Model w Space: zmieniony na Claude Opus 4.6 ✅
 - Instructions w Space — dodane ✅
+- Sources w Space — do dodania ręcznie (brak API) ⏳
+- MCP Servers — omówione: GitHub MCP ✅, Railway MCP ⏳ TODO
+- Copilot API — nie istnieje publicznie ❌
 - Sprawdzono wszystkie ustawienia Copilot — wszystko ✅ Enabled
 - AI model training — ❌ Disabled (świadoma decyzja)
 - Product improvements — ✅ Enabled (ptaszek, domyślne)
