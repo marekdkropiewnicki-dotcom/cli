@@ -112,11 +112,22 @@ Avoid:
 
 ## Setup (iPhone iOS)
 
-- **GitHub app + Copilot Pro+** — przeglądanie repo, Copilot Chat
-- **Working Copy** — Git (commit, push, pull)
-- **Textastic** — edytor kodu
-- **Brave** — przeglądarka
+| App | Do czego |
+|-----|---------|
+| **GitHub app** | Przeglądanie repo, Copilot Chat ✅ główny |
+| **Working Copy** | Git (commit, push, pull) ✅ główny |
+| **Textastic** | Edytor kodu ✅ główny |
+| **Shellfish** | Terminal SSH na iOS 🔥 |
+| **Railway app** | Deployment, logi Railway ✅ |
+| **Code app** | Edytor kodu (alternatywa dla Textastic) |
+| **FTP Servers** | FTP/SFTP dostęp |
+| **S3 Servers** | AWS S3 / storage |
+| **Source Remote** | Git remote manager |
+| **Station** | TBD |
+| **Brave** | Przeglądarka |
+
 - ⚠️ GitHub app czasem wyrzuca sesję — po powrocie wracamy do `cli` repo jako kontekst
+- 💡 Railway app + Shellfish = dostęp do Railway bez MCP!
 
 ## Zasady współpracy
 
@@ -147,3 +158,7 @@ Avoid:
 - Premium requests: 49.8% wykorzystane
 - GitHub app wyrzuca sesję — dodano notatkę do Setup
 - Copilot-generated commit messages — ✅ Enabled
+- Pełny arsenał iOS apps: GitHub, Working Copy, Textastic, Shellfish, Railway app, Code, FTP Servers, S3 Servers, Source Remote, Station, Brave
+- Railway app + Shellfish = dostęp do Railway bez MCP ✅
+
+Commit message: "Update Copilot instructions - full iOS apps setup"
