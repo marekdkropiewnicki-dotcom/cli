@@ -35,10 +35,17 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 - **Premium requests:** ~49.8% wykorzystane (reset 1. dnia miesiąca)
 - **Coding agents:** Copilot ✅ Claude ✅ Codex ✅
 - **Automatic code review:** ✅ Enabled
-- **Copilot Memory:** ✅ Enabled
+- **Copilot Memory:** ✅ Enabled (Preview)
 - **MCP servers:** ✅ Enabled
-- **Copilot Spaces:** ✅ Enabled (wymaga VSCode — na razie pomijamy)
+- **Copilot Spaces:** ✅ Enabled
+- **Copilot-generated commit messages:** ✅ Enabled
 - **AI model training:** ❌ Disabled (świadoma decyzja prywatności)
+
+## Copilot Spaces
+
+- **Space:** GentelmeN-CorE — aktywny
+- **Model docelowy:** Claude Opus (do zmiany z Haiku 4.5)
+- **Link:** https://github.com/copilot/spaces
 
 ## Privacy
 
@@ -69,9 +76,11 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 - Ustalono setup: GitHub app + Working Copy + Textastic + Brave
 - Aktywny projekt: GeNCorE (PR #7 otwarty — Fix GeNCorE naming, HF 410, voice routing)
 - Skonfigurowano Copilot Pro+: coding agents (Copilot + Claude + Codex), automatic code review, Memory, MCP
-- Copilot Spaces — pomijamy (wymaga VSCode, nie dostępne na iOS)
+- Copilot Spaces — aktywne, Space GentelmeN-CorE utworzony
+- Model w Space: Haiku 4.5 → do zmiany na Claude Opus
 - Sprawdzono wszystkie ustawienia Copilot — wszystko ✅ Enabled
 - AI model training — ❌ Disabled (świadoma decyzja)
 - Product improvements — ✅ Enabled (ptaszek, domyślne)
 - Premium requests: 49.8% wykorzystane
 - GitHub app wyrzuca sesję — dodano notatkę do Setup
+- Copilot-generated commit messages — ✅ Enabled
