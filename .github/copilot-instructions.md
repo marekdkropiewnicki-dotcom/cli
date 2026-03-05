@@ -103,6 +103,7 @@ Avoid:
 | **Copilot API** | ❌ Brak publicznego API | ❌ | — |
 
 ### Kolejność konfiguracji
+
 1. **Railway MCP** ⏳ — następne w kolejce
 2. Hugging Face MCP
 3. Telegram MCP
@@ -158,26 +159,12 @@ Avoid:
 ## Session History
 
 ### 2026-03-05
-- Stworzono `.github/copilot-instructions.md` w `cli` jako główny workspace
-- Ustalono setup: GitHub app + Working Copy + Textastic + Brave
-- Aktywny projekt: GeNCorE (PR #7 otwarty — Fix GeNCorE naming, HF 410, voice routing)
-- Skonfigurowano Copilot Pro+: coding agents (Copilot + Claude + Codex), automatic code review, Memory, MCP
-- Copilot Spaces — aktywne, Space GentelmeN-CorE utworzony
-- Model w Space: zmieniony na Claude Opus 4.6 ✅
-- Instructions w Space — dodane ✅
-- Sources w Space — do dodania ręcznie (brak API) ⏳
-- MCP Servers — zbadane: Railway ✅, HF ✅, Telegram ✅, Brave ✅, Groq ❌, KuCoin ❌
-- Kolejność konfiguracji MCP: Railway → HF → Telegram → Brave
-- Dodano tabelkę "Czego Copilot nie ma bez MCP"
-- Copilot API — nie istnieje publicznie ❌
-- Sprawdzono wszystkie ustawienia Copilot — wszystko ✅ Enabled
-- AI model training — ❌ Disabled (świadoma decyzja)
-- Product improvements — ✅ Enabled (ptaszek, domyślne)
-- Premium requests: 49.8% wykorzystane
-- GitHub app wyrzuca sesję — dodano notatkę do Setup
-- Copilot-generated commit messages — ✅ Enabled
-- Pełny arsenał iOS apps: GitHub, Working Copy, Textastic, Shellfish, Railway app, Code, FTP Servers, S3 Servers, Source Remote, Station, Brave
-- Railway app + Shellfish = dostęp do Railway bez MCP ✅
-- Usunięto błędną linię z commit message wklejoną przez Claude Opus
-- Zaktualizowano opisy 3 appek w Setup: Source Remote, FTP Servers, S3 Servers — rodzina siostrzanych appek (ta sama idea, różne protokoły)
-- Dodano sekcję Subskrypcje: GitHub Copilot Pro+, Groq Pro, HF Pro, Railway Pro, Telegram Pro+Biznes, KuCoin L1, Brave Pro, Discord Pro, Gravatar Pro
+- Workspace `cli` skonfigurowany jako główny kontekst Copilota
+- GeNCorE aktywny (PR #7 otwarty — naming, HF 410, voice routing)
+- Copilot Pro+ skonfigurowany: agents (Copilot + Claude + Codex), Memory, MCP, Spaces ✅
+- Space GentelmeN-CorE: model Claude Opus 4.6, instructions dodane ✅
+- MCP zbadane: Railway/HF/Telegram/Brave ✅ | Groq/KuCoin ❌ (brak MCP)
+- Kolejność MCP: Railway → HF → Telegram → Brave
+- Pełny arsenał iOS: GitHub, Working Copy, Textastic, Shellfish, Railway app, Code, FTP Servers, S3 Servers, Source Remote, Station, Brave
+- Subskrypcje zapisane: GitHub/Groq/HF/Railway/Telegram/KuCoin/Brave/Discord/Gravatar — wszystkie Pro ✅
+- Opisy siostrzanych appek (Source Remote, FTP Servers, S3 Servers) zaktualizowane ✅
