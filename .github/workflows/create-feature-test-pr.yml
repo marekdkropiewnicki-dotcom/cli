@@ -14,14 +14,27 @@ jobs:
   create-pr:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Create PR from feature/test to trunk
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr create \
+          existing=$(gh pr list \
             --repo marekdkropiewnicki-dotcom/cli \
-            --title "Testowa zmiana README z iPhone" \
-            --body $'Dodaje drugą testową linię w README z iPhone.\n\nBrak zmian w kodzie.' \
             --head feature/test \
             --base trunk \
-            || echo "PR may already exist or creation failed"
+            --state open \
+            --json number \
+            --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            echo "PR #$existing already exists from feature/test to trunk"
+          else
+            gh pr create \
+              --repo marekdkropiewnicki-dotcom/cli \
+              --title "Testowa zmiana README z iPhone" \
+              --body $'Dodaje drugą testową linię w README z iPhone.\n\nBrak zmian w kodzie.' \
+              --head feature/test \
+              --base trunk
+          fi
