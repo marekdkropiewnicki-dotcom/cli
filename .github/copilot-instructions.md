@@ -29,6 +29,22 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 | 🧠 Claude (Anthropic) | Coding agent — włączony |
 | ⚡ Codex | Coding agent — włączony |
 
+## Subskrypcje
+
+Wszystkie kluczowe serwisy są na płatnych planach:
+
+| Serwis | Plan |
+|--------|------|
+| **GitHub** | Copilot Pro+ |
+| **Groq** | Pro |
+| **Hugging Face** | Pro |
+| **Railway** | Pro |
+| **Telegram** | Pro + Biznes |
+| **KuCoin** | Level 1 (zweryfikowany) |
+| **Brave** | Pro |
+| **Discord** | Pro |
+| **Gravatar** | Pro (opłacony przez WordPress) |
+
 ## Copilot Setup
 
 - **Plan:** Copilot Pro+
@@ -164,3 +180,4 @@ Avoid:
 - Railway app + Shellfish = dostęp do Railway bez MCP ✅
 - Usunięto błędną linię z commit message wklejoną przez Claude Opus
 - Zaktualizowano opisy 3 appek w Setup: Source Remote, FTP Servers, S3 Servers — rodzina siostrzanych appek (ta sama idea, różne protokoły)
+- Dodano sekcję Subskrypcje: GitHub Copilot Pro+, Groq Pro, HF Pro, Railway Pro, Telegram Pro+Biznes, KuCoin L1, Brave Pro, Discord Pro, Gravatar Pro
