@@ -112,6 +112,8 @@ Avoid:
 
 ## Setup (iPhone iOS)
 
+> Trzy siostrzane appki (Source Remote, FTP Servers, S3 Servers) — ta sama idea, różne protokoły: zdalny zasób dostępny jak lokalny dysk w Files app.
+
 | App | Do czego |
 |-----|---------|
 | **GitHub app** | Przeglądanie repo, Copilot Chat ✅ główny |
@@ -120,9 +122,9 @@ Avoid:
 | **Shellfish** | Terminal SSH na iOS 🔥 |
 | **Railway app** | Deployment, logi Railway ✅ |
 | **Code app** | Edytor kodu (alternatywa dla Textastic) |
-| **FTP Servers** | FTP/SFTP dostęp |
-| **S3 Servers** | AWS S3 / storage |
-| **Source Remote** | Git remote manager |
+| **FTP Servers** | Dostęp do serwerów FTP/SFTP bezpośrednio w Files app — jak lokalny dysk |
+| **S3 Servers** | Dostęp do bucketów AWS/S3 bezpośrednio w Files app — jak lokalny dysk |
+| **Source Remote** | Dostęp do repo Git (GitHub, GitLab, Gitea, BitBucket) w Files app bez klonowania |
 | **Station** | TBD |
 | **Brave** | Przeglądarka |
 
@@ -161,3 +163,4 @@ Avoid:
 - Pełny arsenał iOS apps: GitHub, Working Copy, Textastic, Shellfish, Railway app, Code, FTP Servers, S3 Servers, Source Remote, Station, Brave
 - Railway app + Shellfish = dostęp do Railway bez MCP ✅
 - Usunięto błędną linię z commit message wklejoną przez Claude Opus
+- Zaktualizowano opisy 3 appek w Setup: Source Remote, FTP Servers, S3 Servers — rodzina siostrzanych appek (ta sama idea, różne protokoły)
