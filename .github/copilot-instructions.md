@@ -8,7 +8,7 @@ Jest to fork oficjalnego GitHub CLI (`gh`), napisanego w Go.
 ## Właściciel
 
 - **GitHub:** marekdkropiewnicki-dotcom
-- **Device:** iPhone 16 (iOS) — wszystkie sesje prowadzone na iOS
+- **Device:** iPhone (iOS) — wszystkie sesje prowadzone na iOS
 
 ## Główny projekt: GeNCorE
 
@@ -25,13 +25,24 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 | Kto | Rola |
 |-----|------|
 | 👨 Marek | Pomysłodawca, developer |
-| 🤖 GitHub Copilot | Kod, PR, GitHub |
-| 🧠 Claude (Anthropic) | AI core — współpraca przy budowie AI |
+| 🤖 GitHub Copilot | Kod, PR, GitHub, Chat |
+| 🧠 Claude (Anthropic) | Coding agent — włączony |
+| ⚡ Codex | Coding agent — włączony |
+
+## Copilot Setup
+
+- **Plan:** Copilot Pro+
+- **Premium requests:** ~50% wykorzystane (reset 1. dnia miesiąca)
+- **Coding agents:** Copilot ✅ Claude ✅ Codex ✅
+- **Automatic code review:** ✅ Enabled
+- **Copilot Memory:** ✅ Enabled
+- **MCP servers:** ✅ Enabled
+- **Copilot Spaces:** ✅ Enabled (wymaga VSCode — na razie pomijamy)
 
 ## Setup (iPhone iOS)
 
+- **GitHub app + Copilot Pro+** — przeglądanie repo, Copilot Chat
 - **Working Copy** — Git (commit, push, pull)
-- **GitHub app + Copilot Pro** — przeglądanie repo, Copilot
 - **Textastic** — edytor kodu
 - **Brave** — przeglądarka
 
@@ -47,5 +58,7 @@ Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/Ge
 
 ### 2026-03-05
 - Stworzono `.github/copilot-instructions.md` w `cli` jako główny workspace
-- Ustalono setup: Working Copy + GitHub app + Textastic + Brave
+- Ustalono setup: GitHub app + Working Copy + Textastic + Brave
 - Aktywny projekt: GeNCorE (PR #7 otwarty — Fix GeNCorE naming, HF 410, voice routing)
+- Skonfigurowano Copilot Pro+: coding agents (Copilot + Claude + Codex), automatic code review, Memory, MCP
+- Copilot Spaces — pomijamy (wymaga VSCode, nie dostępne na iOS)
