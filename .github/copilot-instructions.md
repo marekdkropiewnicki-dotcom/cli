@@ -73,12 +73,36 @@ Avoid:
 
 ## MCP Servers
 
-- **GitHub MCP** — oficjalny MCP od GitHuba ✅ Enabled w ustawieniach
-  - Repo: https://github.com/github/mcp-server
-  - Daje Copilotowi dostęp do GitHub API (repo, issues, PR)
-  - Do skonfigurowania w Space → **Install MCP**
-- **Railway MCP** — do podłączenia (deployment, logi) ⏳ TODO
-- **Copilot API** — brak publicznego API ❌
+### Dostępne MCP dla GeNCorE stacku
+
+| API | MCP | Status | Link |
+|-----|-----|--------|------|
+| **GitHub** | ✅ Oficjalny | ✅ Enabled | [github/mcp-server](https://github.com/github/mcp-server) |
+| **Railway** | ✅ Oficjalny | ⏳ TODO | [railwayapp/railway-mcp-server](https://github.com/railwayapp/railway-mcp-server) |
+| **Hugging Face** | ✅ Oficjalny | ⏳ TODO | [hf.co/mcp](https://huggingface.co/docs/hub/agents-mcp) |
+| **Telegram** | ✅ Community | ⏳ TODO | [sparfenyuk/mcp-telegram](https://github.com/sparfenyuk/mcp-telegram) |
+| **Brave Search** | ✅ Oficjalny | ⏳ TODO | [brave/brave-search-mcp-server](https://github.com/brave/brave-search-mcp-server) |
+| **Groq** | ❌ Brak MCP | ❌ | — |
+| **KuCoin** | ❌ Brak MCP | ❌ | — |
+| **Copilot API** | ❌ Brak publicznego API | ❌ | — |
+
+### Kolejność konfiguracji
+1. **Railway MCP** ⏳ — następne w kolejce
+2. Hugging Face MCP
+3. Telegram MCP
+4. Brave Search MCP
+
+### Czego Copilot nie ma (bez MCP)
+
+| Brak dostępu | Uwagi |
+|---|---|
+| ❌ Copilot Spaces API | Preview — brak publicznego API |
+| ❌ Railway API | Deployment, logi — wymaga Railway MCP |
+| ❌ Telegram Bot API | Bezpośrednie akcje — wymaga Telegram MCP |
+| ❌ Groq API | Modele — brak MCP |
+| ❌ Hugging Face API | Modele/obrazy — wymaga HF MCP |
+| ❌ KuCoin API | Krypto — brak MCP |
+| ❌ Brave Search API | Tylko przez kod w GeNCorE — wymaga Brave MCP |
 
 ## Privacy
 
@@ -113,7 +137,9 @@ Avoid:
 - Model w Space: zmieniony na Claude Opus 4.6 ✅
 - Instructions w Space — dodane ✅
 - Sources w Space — do dodania ręcznie (brak API) ⏳
-- MCP Servers — omówione: GitHub MCP ✅, Railway MCP ⏳ TODO
+- MCP Servers — zbadane: Railway ✅, HF ✅, Telegram ✅, Brave ✅, Groq ❌, KuCoin ❌
+- Kolejność konfiguracji MCP: Railway → HF → Telegram → Brave
+- Dodano tabelkę "Czego Copilot nie ma bez MCP"
 - Copilot API — nie istnieje publicznie ❌
 - Sprawdzono wszystkie ustawienia Copilot — wszystko ✅ Enabled
 - AI model training — ❌ Disabled (świadoma decyzja)
