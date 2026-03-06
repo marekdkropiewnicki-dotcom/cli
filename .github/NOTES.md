@@ -34,6 +34,7 @@ Konfigurujemy MCP serwery dla GitHub Copilot w repo `marekdkropiewnicki-dotcom/c
 - ✅ Serwer `brave-search` zaktualizowany na zdalny SSE via Smithery
 - ✅ Serwer `huggingface` dodany jako SSE ✅
 - ✅ Projekt częściowo na iOS — 3 serwery SSE działają!
+- ✅ Sync zweryfikowany (2026-03-06)
 
 ### Co to jest context7? 📚
 **Context7** to narzędzie które daje mi (Copilotowi) dostęp do **aktualnej dokumentacji** bibliotek i frameworków.
