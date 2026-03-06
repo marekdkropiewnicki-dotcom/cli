@@ -20,24 +20,32 @@ Konfigurujemy MCP serwery dla GitHub Copilot w repo `marekdkropiewnicki-dotcom/c
   - **brave-search** — zdalny SSE via Smithery ✅ (działa na iOS!)
   - **telegram** — klucze jako secrets (wymaga PC)
   - **discord** — token jako secrets (wymaga PC)
+  - **huggingface** — zdalny SSE `https://hf.co/mcp/sse` ✅ (działa na iOS!)
 - ✅ Secret `DISCORD_BOT_TOKEN` dodany do repo secrets
 - ✅ Secret `BRAVE_API_KEY` dodany do repo secrets
 - ✅ Secret `TELEGRAM_API_ID` dodany do repo secrets
 - ✅ Secret `TELEGRAM_API_HASH` dodany do repo secrets
 - ✅ Secret `SMITHERY_API_KEY` dodany do repo secrets
+- ✅ Secret `HUGGINGFACE_API_KEY` dodany do repo secrets
 - ✅ Secret scanning — zaakceptowany (wybrano "It's used in tests")
 - ✅ `.github/NOTES.md` — pamięć Copilota działa
 - ✅ Wszystkie klucze przeniesione do secrets (brak plain text)
 - ✅ Serwer `github` zaktualizowany na zdalny SSE endpoint
 - ✅ Serwer `brave-search` zaktualizowany na zdalny SSE via Smithery
-- ✅ Projekt częściowo na iOS — 2 serwery SSE działają!
+- ✅ Serwer `huggingface` dodany jako SSE ✅
+- ✅ Projekt częściowo na iOS — 3 serwery SSE działają!
+
+### Co to jest context7? 📚
+**Context7** to narzędzie które daje mi (Copilotowi) dostęp do **aktualnej dokumentacji** bibliotek i frameworków.
+
+Wyobraź sobie że piszesz kod i pytasz mnie o React lub Next.js — normalnie znam tylko to co było w moich danych treningowych (czyli stare wersje!). Dzięki context7 mogę sięgnąć po **najnowszą dokumentację** na żywo i dać Ci aktualną odpowiedź. To jakby dać mi dostęp do "ściągawki" z najnowszymi informacjami! 📖✨
 
 ### Problem
 - ⚠️ iOS / gh app resetuje kontekst rozmowy — Copilot traci pamięć sesji
 - ✅ Rozwiązanie: `@sync` + NOTES.md
 
 ### 🔲 Jeszcze do zrobienia
-- 🔲 Przetestować działanie serwerów `github` i `brave-search` (SSE) na iOS
+- 🔲 Przetestować działanie serwerów `github`, `brave-search`, `huggingface` (SSE) na iOS
 - 🔲 Serwery `context7`, `telegram`, `discord` wymagają PC + VS Code
 
 ---
@@ -58,3 +66,4 @@ Konfigurujemy MCP serwery dla GitHub Copilot w repo `marekdkropiewnicki-dotcom/c
 | brave-search | `sse` | `https://server.smithery.ai/@arjunkmrm/brave-search-mcp-server/mcp` | `SMITHERY_API_KEY` ✅ |
 | telegram | `stdio` | `mcp-telegram` | `TELEGRAM_API_ID` ✅, `TELEGRAM_API_HASH` ✅ (wymaga PC) |
 | discord | `stdio` | `@scarecr0w12/discord-mcp` | `DISCORD_BOT_TOKEN` ✅ (wymaga PC) |
+| huggingface | `sse` | `https://hf.co/mcp/sse` | `HUGGINGFACE_API_KEY` ✅ |
