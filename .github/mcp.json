@@ -1,30 +1,33 @@
 {
   "servers": {
-    "railway": {
+    "github": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@railway/mcp-server"]
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${{ secrets.GITHUB_TOKEN }}"
+      }
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
     },
     "brave-search": {
       "type": "stdio",
       "command": "npx",
       "args": ["-y", "@brave/brave-search-mcp-server", "--transport", "stdio"],
       "env": {
-        "BRAVE_API_KEY": "BSABZBT0iV1_RZucl8qVwkcbxVWwMpY"
+        "BRAVE_API_KEY": "${{ secrets.BRAVE_API_KEY }}"
       }
     },
     "telegram": {
       "type": "stdio",
       "command": "mcp-telegram",
       "env": {
-        "TELEGRAM_API_ID": "33328765",
-        "TELEGRAM_API_HASH": "cff9c9eb8acf8b3ebf58cd6d6ae6fe33"
+        "TELEGRAM_API_ID": "${{ secrets.TELEGRAM_API_ID }}",
+        "TELEGRAM_API_HASH": "${{ secrets.TELEGRAM_API_HASH }}"
       }
-    },
-    "huggingface": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@llmindset/hf-mcp-server"]
     },
     "discord": {
       "type": "stdio",
