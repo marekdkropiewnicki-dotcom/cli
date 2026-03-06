@@ -61,7 +61,7 @@ Wszystkie kluczowe serwisy są na płatnych planach:
 
 - **Space:** GentelmeN-CorE — aktywny
 - **Model:** Claude Opus 4.6 ✅
-- **Sources:** do dodania ręcznie — `marekdkropiewnicki-dotcom/GentelmeN-CorE`
+- **Sources:** `marekdkropiewnicki-dotcom/GentelmeN-CorE` ✅
 - **Link:** https://github.com/copilot/spaces
 - **Instructions:**
 
@@ -162,7 +162,7 @@ Avoid:
 - Workspace `cli` skonfigurowany jako główny kontekst Copilota
 - GeNCorE aktywny (PR #7 otwarty — naming, HF 410, voice routing)
 - Copilot Pro+ skonfigurowany: agents (Copilot + Claude + Codex), Memory, MCP, Spaces ✅
-- Space GentelmeN-CorE: model Claude Opus 4.6, instructions dodane ✅
+- Space GentelmeN-CorE: model Claude Opus 4.6, instructions dodane ✅, sources dodane ✅
 - MCP zbadane: Railway/HF/Telegram/Brave ✅ | Groq/KuCoin ❌ (brak MCP)
 - Kolejność MCP: Railway → HF → Telegram → Brave
 - Pełny arsenał iOS: GitHub, Working Copy, Textastic, Shellfish, Railway app, Code, FTP Servers, S3 Servers, Source Remote, Station, Brave
