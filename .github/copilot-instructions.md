@@ -89,31 +89,37 @@ Avoid:
 
 ## MCP Servers
 
-### Dostępne MCP dla GeNCorE stacku
+### Aktywne MCP (`mcp.json`)
 
-| API | MCP | Status | Link |
-|-----|-----|--------|------|
-| **GitHub** | ✅ Oficjalny | ✅ Enabled | [github/mcp-server](https://github.com/github/mcp-server) |
-| **Railway** | ✅ Oficjalny | ✅ Enabled | [railwayapp/railway-mcp-server](https://github.com/railwayapp/railway-mcp-server) |
-| **Hugging Face** | ✅ Community | ✅ Enabled | [@llmindset/hf-mcp-server](https://www.npmjs.com/package/@llmindset/hf-mcp-server) |
-| **Telegram** | ✅ Community | ✅ Enabled | [sparfenyuk/mcp-telegram](https://github.com/sparfenyuk/mcp-telegram) |
-| **Brave Search** | ✅ Oficjalny | ✅ Enabled | [brave/brave-search-mcp-server](https://github.com/brave/brave-search-mcp-server) |
-| **Groq** | ❌ Brak MCP | ❌ | — |
-| **KuCoin** | ❌ Brak MCP | ❌ | — |
-| **Copilot API** | ❌ Brak publicznego API | ❌ | — |
+| Serwer | Typ | Endpoint / Package | Secrets |
+|---|---|---|---|
+| `github` | `sse` | `https://mcp.github.com/mcp` | — |
+| `brave-search` | `sse` | `https://server.smithery.ai/@arjunkmrm/brave-search-mcp-server/mcp` | `SMITHERY_API_KEY` |
+| `huggingface` | `sse` | `https://hf.co/mcp/sse` | `HUGGINGFACE_API_KEY` |
+| `context7` | `stdio` | `@upstash/context7-mcp` | — |
+| `telegram` | `stdio` | `mcp-telegram` | `TELEGRAM_API_ID`, `TELEGRAM_API_HASH` |
+| `discord` | `stdio` | `@scarecr0w12/discord-mcp` | `DISCORD_BOT_TOKEN` |
 
-### Czego Copilot nie ma (bez MCP)
+### Brak MCP — obsługa alternatywna
+
+| Serwis | Powód | Alternatywa |
+|---|---|---|
+| **Railway** | Brak MCP w `mcp.json` | Railway app + Shellfish (iOS) 💡 |
+| **Groq** | Brak publicznego MCP | Bezpośrednie API w kodzie |
+| **KuCoin** | Brak publicznego MCP | Bezpośrednie API via ccxt |
+
+### Czego Copilot nie ma
 
 | Brak dostępu | Uwagi |
 |---|---|
 | ❌ Copilot Spaces API | Preview — brak publicznego API |
-| ❌ Groq API | Modele — brak MCP |
-| ❌ KuCoin API | Krypto — brak MCP |
+| ❌ Groq MCP | Brak oficjalnego MCP |
+| ❌ KuCoin MCP | Brak oficjalnego MCP |
 
 ## Privacy
 
 - **Suggestions matching public code:** ✅ Allowed
-- **Allow data for product improvements:** ✅ Enabled (ptaszek — domyślne)
+- **Allow data for product improvements:** ✅ Enabled (domyślne)
 - **Allow data for AI model training:** ❌ Disabled (świadoma decyzja)
 
 ## Setup (iPhone iOS)
@@ -153,13 +159,15 @@ Avoid:
 - Copilot Pro+ skonfigurowany: agents (Copilot + Claude + Codex), Memory, MCP, Spaces ✅
 - Space GentelmeN-CorE: model Claude Opus 4.6, instructions dodane ✅, sources dodane ✅
 - MCP zbadane: Railway/HF/Telegram/Brave ✅ | Groq/KuCoin ❌ (brak MCP)
-- Kolejność MCP: Railway → HF → Telegram → Brave
 - Pełny arsenał iOS: GitHub, Working Copy, Textastic, Shellfish, Railway app, Code, FTP Servers, S3 Servers, Source Remote, Station, Brave
 - Subskrypcje zapisane: GitHub/Groq/HF/Railway/Telegram/KuCoin/Brave/Discord/Gravatar — wszystkie Pro ✅
 - Opisy siostrzanych appek (Source Remote, FTP Servers, S3 Servers) zaktualizowane ✅
 
 ### 2026-03-06
 - `.github/mcp.json` stworzony ✅
-- MCP skonfigurowane: Railway ✅ | Brave Search ✅ | Telegram ✅ | Hugging Face ✅
-- Wszystkie MCP używają wersji Pro (Brave Pro API key, Telegram Pro+Biznes)
-- Tabela MCP zaktualizowana: wszystkie 4 serwisy → ✅ Enabled
+- MCP skonfigurowane: github ✅ | brave-search ✅ | huggingface ✅ | context7 ✅ | telegram ✅ | discord ✅
+- Railway — brak MCP, obsługa via Railway app + Shellfish (iOS) 💡
+- Groq/KuCoin — brak MCP, bezpośrednie API w kodzie
+- `NOTES.md` — posprzątany, spójny, estetyczny ✅
+- `copilot-instructions.md` — zaktualizowany i zsynchronizowany z `mcp.json` ✅
+- Sync zweryfikowany (2026-03-06)
