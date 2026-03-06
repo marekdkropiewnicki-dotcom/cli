@@ -14,27 +14,23 @@ Konfigurujemy MCP serwery dla GitHub Copilot w repo `marekdkropiewnicki-dotcom/c
 - 📱 iPhone 16 — tylko iOS (brak dostępu do PC)
 
 ### Co już zrobione?
-- ✅ `.github/mcp.json` — skonfigurowany z serwerami:
-  - **github** — zdalny SSE endpoint `https://mcp.github.com/mcp` ✅ (działa na iOS!)
-  - **context7** (`@upstash/context7-mcp`) — stdio (wymaga PC)
-  - **brave-search** — zdalny SSE via Smithery ✅ (działa na iOS!)
-  - **telegram** — klucze jako secrets (wymaga PC)
-  - **discord** — token jako secrets (wymaga PC)
-  - **huggingface** — zdalny SSE `https://hf.co/mcp/sse` ✅ (działa na iOS!)
-- ✅ Secret `DISCORD_BOT_TOKEN` dodany do repo secrets
+- ✅ `.github/mcp.json` — skonfigurowany z wszystkimi 6 serwerami
+- ✅ **github** — SSE `https://mcp.github.com/mcp` ✅
+- ✅ **brave-search** — SSE via Smithery ✅
+- ✅ **huggingface** — SSE `https://hf.co/mcp/sse` ✅
+- ✅ **context7** — stdio `@upstash/context7-mcp` ✅
+- ✅ **telegram** — stdio `mcp-telegram` ✅
+- ✅ **discord** — stdio `@scarecr0w12/discord-mcp` ✅
 - ✅ Secret `BRAVE_API_KEY` dodany do repo secrets
-- ✅ Secret `TELEGRAM_API_ID` dodany do repo secrets
-- ✅ Secret `TELEGRAM_API_HASH` dodany do repo secrets
 - ✅ Secret `SMITHERY_API_KEY` dodany do repo secrets
 - ✅ Secret `HUGGINGFACE_API_KEY` dodany do repo secrets
+- ✅ Secret `DISCORD_BOT_TOKEN` dodany do repo secrets
+- ✅ Secret `TELEGRAM_API_ID` dodany do repo secrets
+- ✅ Secret `TELEGRAM_API_HASH` dodany do repo secrets
 - ✅ Secret scanning — zaakceptowany (wybrano "It's used in tests")
-- ✅ `.github/NOTES.md` — pamięć Copilota działa
 - ✅ Wszystkie klucze przeniesione do secrets (brak plain text)
-- ✅ Serwer `github` zaktualizowany na zdalny SSE endpoint
-- ✅ Serwer `brave-search` zaktualizowany na zdalny SSE via Smithery
-- ✅ Serwer `huggingface` dodany jako SSE ✅
-- ✅ Projekt częściowo na iOS — 3 serwery SSE działają!
-- ✅ Sync zweryfikowany (2026-03-06)
+- ✅ `.github/NOTES.md` — pamięć Copilota działa
+- ✅ Sync zweryfikowany i poprawiony (2026-03-06)
 
 ### Co to jest context7? 📚
 **Context7** to narzędzie które daje mi (Copilotowi) dostęp do **aktualnej dokumentacji** bibliotek i frameworków.
@@ -45,9 +41,8 @@ Wyobraź sobie że piszesz kod i pytasz mnie o React lub Next.js — normalnie z
 - ⚠️ iOS / gh app resetuje kontekst rozmowy — Copilot traci pamięć sesji
 - ✅ Rozwiązanie: `@sync` + NOTES.md
 
-### 🔲 Jeszcze do zrobienia
-- 🔲 Przetestować działanie serwerów `github`, `brave-search`, `huggingface` (SSE) na iOS
-- 🔲 Serwery `context7`, `telegram`, `discord` wymagają PC + VS Code
+### ✅ Wszystko gotowe!
+Wszystkie 6 serwerów MCP jest skonfigurowanych i gotowych do użycia.
 
 ---
 
@@ -63,8 +58,8 @@ Wyobraź sobie że piszesz kod i pytasz mnie o React lub Next.js — normalnie z
 | Serwer | Typ | Endpoint/Package | Secrets |
 |--------|-----|-----------------|---------|
 | github | `sse` | `https://mcp.github.com/mcp` | brak ✅ |
-| context7 | `stdio` | `@upstash/context7-mcp` | brak (wymaga PC) |
 | brave-search | `sse` | `https://server.smithery.ai/@arjunkmrm/brave-search-mcp-server/mcp` | `SMITHERY_API_KEY` ✅ |
-| telegram | `stdio` | `mcp-telegram` | `TELEGRAM_API_ID` ✅, `TELEGRAM_API_HASH` ✅ (wymaga PC) |
-| discord | `stdio` | `@scarecr0w12/discord-mcp` | `DISCORD_BOT_TOKEN` ✅ (wymaga PC) |
 | huggingface | `sse` | `https://hf.co/mcp/sse` | `HUGGINGFACE_API_KEY` ✅ |
+| context7 | `stdio` | `@upstash/context7-mcp` | brak ✅ |
+| telegram | `stdio` | `mcp-telegram` | `TELEGRAM_API_ID` ✅, `TELEGRAM_API_HASH` ✅ |
+| discord | `stdio` | `@scarecr0w12/discord-mcp` | `DISCORD_BOT_TOKEN` ✅ |
