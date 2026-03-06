@@ -31,6 +31,13 @@
       "env": {
         "DISCORD_BOT_TOKEN": "${{ secrets.DISCORD_BOT_TOKEN }}"
       }
+    },
+    "huggingface": {
+      "type": "sse",
+      "url": "https://hf.co/mcp/sse",
+      "headers": {
+        "Authorization": "Bearer ${{ secrets.HUGGINGFACE_API_KEY }}"
+      }
     }
   }
 }
