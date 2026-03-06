@@ -12,23 +12,26 @@ Konfigurujemy MCP serwery dla GitHub Copilot w repo `marekdkropiewnicki-dotcom/c
 
 ### Co już zrobione?
 - ✅ `.github/mcp.json` — skonfigurowany z serwerami:
-  - railway
-  - brave-search
-  - telegram
-  - huggingface
-  - discord (token jako `${{ secrets.DISCORD_BOT_TOKEN }}`)
+  - **github** (`@modelcontextprotocol/server-github`) — zastąpił huggingface
+  - **context7** (`@upstash/context7-mcp`) — zastąpił railway
+  - **brave-search** — klucz jako `${{ secrets.BRAVE_API_KEY }}`
+  - **telegram** — klucze jako secrets
+  - **discord** — token jako `${{ secrets.DISCORD_BOT_TOKEN }}`
 - ✅ Secret `DISCORD_BOT_TOKEN` dodany do repo secrets
 - ✅ Secret scanning — zaakceptowany (wybrano "It's used in tests")
 - ✅ `.github/NOTES.md` — pamięć Copilota działa
+- ✅ Wszystkie klucze przeniesione do secrets (brak plain text)
 
 ### Problem
 - ⚠️ iOS / gh app resetuje kontekst rozmowy — Copilot traci pamięć sesji
-- ⚠️ Przez to trzeba zaczynać od nowa za każdym razem
 - ✅ Rozwiązanie: `@sync` + NOTES.md
 
-### Następne kroki
-- 🔲 Przetestować działanie Discord MCP
-- 🔲 Ewentualnie dodać kolejne MCP serwery
+### 🔲 Jeszcze do zrobienia
+- 🔲 Dodać 3 secrets ręcznie w repo:
+  - `BRAVE_API_KEY`
+  - `TELEGRAM_API_ID`
+  - `TELEGRAM_API_HASH`
+- 🔲 Przetestować działanie wszystkich MCP serwerów
 
 ---
 
@@ -37,3 +40,14 @@ Konfigurujemy MCP serwery dla GitHub Copilot w repo `marekdkropiewnicki-dotcom/c
 - Branch: `trunk`
 - Właściciel: `marekdkropiewnicki-dotcom`
 - Kod wywołania pamięci: `@sync`
+
+---
+
+## 📋 Aktualna konfiguracja mcp.json
+| Serwer | Package | Secrets |
+|--------|---------|---------|
+| github | `@modelcontextprotocol/server-github` | `GITHUB_TOKEN` ✅ |
+| context7 | `@upstash/context7-mcp` | brak ✅ |
+| brave-search | `@brave/brave-search-mcp-server` | `BRAVE_API_KEY` 🔲 |
+| telegram | `mcp-telegram` | `TELEGRAM_API_ID`, `TELEGRAM_API_HASH` 🔲 |
+| discord | `@scarecr0w12/discord-mcp` | `DISCORD_BOT_TOKEN` ✅ |
