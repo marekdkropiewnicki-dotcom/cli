@@ -25,6 +25,14 @@
       "type": "stdio",
       "command": "npx",
       "args": ["-y", "@llmindset/hf-mcp-server"]
+    },
+    "discord": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@scarecr0w12/discord-mcp"],
+      "env": {
+        "DISCORD_BOT_TOKEN": "${{ secrets.DISCORD_BOT_TOKEN }}"
+      }
     }
   }
 }
