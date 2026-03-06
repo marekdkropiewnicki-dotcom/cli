@@ -1,0 +1,1 @@
+{\n  "servers": {\n    "railway": {\n      "type": "stdio",\n      "command": "npx",\n      "args": ["-y", "@railway/mcp-server"]\n    }\n  }\n}
