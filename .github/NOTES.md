@@ -1,7 +1,7 @@
 # 🧠 Copilot Memory — NOTES.md
 
-## Kod wywołania: `@sync`
-Użyj `@sync` żeby przypomnieć mi kontekst sesji.
+## Wywołanie synca: `@sync`
+Wpisz `@sync` aby przywrócić kontekst sesji.
 
 ---
 
@@ -34,10 +34,10 @@ Konfigurujemy MCP serwery dla GitHub Copilot w repo `marekdkropiewnicki-dotcom/c
 - `BRAVE_API_KEY`
 
 **Inne:**
-- Wszystkie klucze przeniesione do secrets (brak plain text)
+- Wszystkie klucze w secrets (brak plain text)
 - Secret scanning zaakceptowany ("It's used in tests")
 - `NOTES.md` — pamięć Copilota działa
-- Sync zweryfikowany (2026-03-06)
+- Sync zweryfikowany i posprzątany (2026-03-06)
 
 ---
 
