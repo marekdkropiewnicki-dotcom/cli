@@ -94,32 +94,21 @@ Avoid:
 | API | MCP | Status | Link |
 |-----|-----|--------|------|
 | **GitHub** | ✅ Oficjalny | ✅ Enabled | [github/mcp-server](https://github.com/github/mcp-server) |
-| **Railway** | ✅ Oficjalny | ⏳ TODO | [railwayapp/railway-mcp-server](https://github.com/railwayapp/railway-mcp-server) |
-| **Hugging Face** | ✅ Oficjalny | ⏳ TODO | [hf.co/mcp](https://huggingface.co/docs/hub/agents-mcp) |
-| **Telegram** | ✅ Community | ⏳ TODO | [sparfenyuk/mcp-telegram](https://github.com/sparfenyuk/mcp-telegram) |
-| **Brave Search** | ✅ Oficjalny | ⏳ TODO | [brave/brave-search-mcp-server](https://github.com/brave/brave-search-mcp-server) |
+| **Railway** | ✅ Oficjalny | ✅ Enabled | [railwayapp/railway-mcp-server](https://github.com/railwayapp/railway-mcp-server) |
+| **Hugging Face** | ✅ Community | ✅ Enabled | [@llmindset/hf-mcp-server](https://www.npmjs.com/package/@llmindset/hf-mcp-server) |
+| **Telegram** | ✅ Community | ✅ Enabled | [sparfenyuk/mcp-telegram](https://github.com/sparfenyuk/mcp-telegram) |
+| **Brave Search** | ✅ Oficjalny | ✅ Enabled | [brave/brave-search-mcp-server](https://github.com/brave/brave-search-mcp-server) |
 | **Groq** | ❌ Brak MCP | ❌ | — |
 | **KuCoin** | ❌ Brak MCP | ❌ | — |
 | **Copilot API** | ❌ Brak publicznego API | ❌ | — |
-
-### Kolejność konfiguracji
-
-1. **Railway MCP** ⏳ — następne w kolejce
-2. Hugging Face MCP
-3. Telegram MCP
-4. Brave Search MCP
 
 ### Czego Copilot nie ma (bez MCP)
 
 | Brak dostępu | Uwagi |
 |---|---|
 | ❌ Copilot Spaces API | Preview — brak publicznego API |
-| ❌ Railway API | Deployment, logi — wymaga Railway MCP |
-| ❌ Telegram Bot API | Bezpośrednie akcje — wymaga Telegram MCP |
 | ❌ Groq API | Modele — brak MCP |
-| ❌ Hugging Face API | Modele/obrazy — wymaga HF MCP |
 | ❌ KuCoin API | Krypto — brak MCP |
-| ❌ Brave Search API | Tylko przez kod w GeNCorE — wymaga Brave MCP |
 
 ## Privacy
 
@@ -168,3 +157,9 @@ Avoid:
 - Pełny arsenał iOS: GitHub, Working Copy, Textastic, Shellfish, Railway app, Code, FTP Servers, S3 Servers, Source Remote, Station, Brave
 - Subskrypcje zapisane: GitHub/Groq/HF/Railway/Telegram/KuCoin/Brave/Discord/Gravatar — wszystkie Pro ✅
 - Opisy siostrzanych appek (Source Remote, FTP Servers, S3 Servers) zaktualizowane ✅
+
+### 2026-03-06
+- `.github/mcp.json` stworzony ✅
+- MCP skonfigurowane: Railway ✅ | Brave Search ✅ | Telegram ✅ | Hugging Face ✅
+- Wszystkie MCP używają wersji Pro (Brave Pro API key, Telegram Pro+Biznes)
+- Tabela MCP zaktualizowana: wszystkie 4 serwisy → ✅ Enabled
