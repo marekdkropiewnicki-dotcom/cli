@@ -10,11 +10,10 @@
       "args": ["-y", "@upstash/context7-mcp"]
     },
     "brave-search": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@brave/brave-search-mcp-server", "--transport", "stdio"],
-      "env": {
-        "BRAVE_API_KEY": "${{ secrets.BRAVE_API_KEY }}"
+      "type": "sse",
+      "url": "https://server.smithery.ai/@arjunkmrm/brave-search-mcp-server/mcp",
+      "headers": {
+        "Authorization": "Bearer ${{ secrets.SMITHERY_API_KEY }}"
       }
     },
     "telegram": {
