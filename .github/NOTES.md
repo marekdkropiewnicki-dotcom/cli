@@ -19,10 +19,12 @@ Konfigurujemy MCP serwery dla GitHub Copilot w repo `marekdkropiewnicki-dotcom/c
   - discord (token jako `${{ secrets.DISCORD_BOT_TOKEN }}`)
 - ✅ Secret `DISCORD_BOT_TOKEN` dodany do repo secrets
 - ✅ Secret scanning — zaakceptowany (wybrano "It's used in tests")
+- ✅ `.github/NOTES.md` — pamięć Copilota działa
 
 ### Problem
 - ⚠️ iOS / gh app resetuje kontekst rozmowy — Copilot traci pamięć sesji
 - ⚠️ Przez to trzeba zaczynać od nowa za każdym razem
+- ✅ Rozwiązanie: `@sync` + NOTES.md
 
 ### Następne kroki
 - 🔲 Przetestować działanie Discord MCP
@@ -34,3 +36,4 @@ Konfigurujemy MCP serwery dla GitHub Copilot w repo `marekdkropiewnicki-dotcom/c
 - Repo: `marekdkropiewnicki-dotcom/cli`
 - Branch: `trunk`
 - Właściciel: `marekdkropiewnicki-dotcom`
+- Kod wywołania pamięci: `@sync`
