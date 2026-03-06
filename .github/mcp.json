@@ -1,1 +1,30 @@
-{\n  "servers": {\n    "railway": {\n      "type": "stdio",\n      "command": "npx",\n      "args": ["-y", "@railway/mcp-server"]\n    }\n  }\n}
+{
+  "servers": {
+    "railway": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@railway/mcp-server"]
+    },
+    "brave-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@brave/brave-search-mcp-server", "--transport", "stdio"],
+      "env": {
+        "BRAVE_API_KEY": "BSABZBT0iV1_RZucl8qVwkcbxVWwMpY"
+      }
+    },
+    "telegram": {
+      "type": "stdio",
+      "command": "mcp-telegram",
+      "env": {
+        "TELEGRAM_API_ID": "33328765",
+        "TELEGRAM_API_HASH": "cff9c9eb8acf8b3ebf58cd6d6ae6fe33"
+      }
+    },
+    "huggingface": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@llmindset/hf-mcp-server"]
+    }
+  }
+}
