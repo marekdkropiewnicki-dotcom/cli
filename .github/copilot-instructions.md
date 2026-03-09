@@ -200,7 +200,9 @@ Avoid:
 - `copilot-instructions.md` + `NOTES.md` scalone w jeden plik ✅
 - `copolitan-instructions.md` (literówka iOS) — wyczyszczony ✅
 - Struktura `.github/` uporządkowana ✅
+
 ### 2026-03-09
+
 - Repo GentelmeN-CorE upublicznione ✅
 - 5 pustych WIP PRów (#8–#12) zamkniętych, branche usunięte ✅
 - Root cause PRów: Railway log error (nie był błędem kodu) ✅
