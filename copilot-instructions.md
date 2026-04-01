@@ -1,40 +1,134 @@
-# Copilot Instructions for cli (workspace)
+# 🤖 Copilot Instructions — marekdkropiewnicki-dotcom/cli
 
-## O tym repo
+---
 
-To repozytorium (`cli`) służy jako **główny workspace** do codziennej pracy na iPhone (iOS).
-Jest to fork oficjalnego GitHub CLI (`gh`), napisanego w Go.
+## ⚡ @sync — Szybki status
 
-## Właściciel
+| | |
+|---|---|
+| 📅 **Data ostatniego sync** | 2026-04-01 |
+| 📱 **Urządzenie** | iPhone 16 — tylko iOS |
+| 🌿 **Branch (cli)** | `trunk` |
+| 🟢 **Stan** | Zsynchronizowane ✅ |
 
-- **GitHub:** marekdkropiewnicki-dotcom
-- **Device:** iPhone (iOS) — wszystkie sesje prowadzone na iOS
+**MCP:** `github` ✅ `brave-search` ✅ `huggingface` ✅ `context7` ✅ `telegram` ✅ `discord` ✅
+**Railway** → Railway app + Shellfish 💡 | **Groq / KuCoin** → bezpośrednie API w kodzie
 
-## Główny projekt: GeNCorE
+> ⚠️ GitHub app na iOS resetuje kontekst — po powrocie wpisz `@sync`
 
-Równolegle prowadzimy projekt AI — **GeNCorE** (`marekdkropiewnicki-dotcom/GentelmeN-CorE`):
-- Telegram bot w Pythonie
-- AI chat via Groq (llama-3.3-70b-versatile, llama-3.1-8b-instant, qwen-2.5-32b)
-- Generowanie obrazów via Hugging Face
-- Kryptowaluty via KuCoin (ccxt)
-- Wyszukiwanie via Brave Search API
-- Deployment na Railway
+---
 
-## Team AI
+## 🗺️ MAPA PROJEKTÓW — gdzie jesteśmy
+
+### 🥇 Priorytet 1 — GeNCorE (działa na produkcji)
+> Telegram bot na Railway. Fundament wszystkiego.
+
+**Repo:** `marekdkropiewnicki-dotcom/GentelmeN-CorE`
+**Branch główny:** `GentelmeN@CorE`
+
+🟢 **Bugi:**
+- `/rysuj` — 410 error → ✅ Naprawiony (SDXL → FLUX.1-schnell, commit `ac1f084`)
+- Voice → `/rysuj` routing → ✅ Już działało (zweryfikowane)
+
+🌿 **Branche:**
+- Tylko 1 branch: `GentelmeN@CorE` ✅
+- 5 branchy `copilot/*` → ✅ Usunięte przez Marka (2026-04-01)
+
+🎯 **Stan GeNCorE:**
+- Stabilny, produkcja działa ✅
+
+---
+
+### 🥈 Priorytet 2 — claude-remote-control (w budowie)
+> Panel webowy do sterowania agentami AI. Budowany na Vercelu.
+
+**Repo:** `marekdkropiewnicki-dotcom/claude-remote-control`
+**Live:** https://claude-remote-control-gilt.vercel.app
+**Stack:** Next.js + Tailwind CSS + Vercel
+
+💡 **Wizja (ustalona 2026-04-01):**
+Jeden panel — trzy zakładki:
+- 💬 Chat z Claude AI
+- 🤖 Zlecaj zadania agentom (Copilot / Claude / Codex)
+- 🔀 Przeglądaj i merguj PR-y GeNCorE
+
+🔗 **Powiązania z innymi projektami:**
+- GeNCorE bot → komendy `/pr lista`, `/zadanie`, `/deploy` przez Telegram
+- cli/gh → GitHub CLI operacje z Shellfish
+
+📋 **Stan PRów:**
+- PR #1 (Claude) — Chat z Claude AI, Next.js 15 — Draft ⏳
+- PR #2 (Copilot) — Command Center, Next.js 14 + Tailwind — Draft ⏳
+
+🎯 **Następny krok:**
+1. Merge PR #1 (Claude) → `main` jako fundament
+2. Rozbudowa o zakładki Agenci + PR-y
+
+⚙️ **Env vars do ustawienia w Vercel:**
+```
+GITHUB_TOKEN=
+ADMIN_TOKEN=
+NEXT_PUBLIC_REPO_OWNER=marekdkropiewnicki-dotcom
+NEXT_PUBLIC_REPO_NAME=GentelmeN-CorE
+```
+
+---
+
+### 🥉 Priorytet 3 — cli/gh (workspace + przyszłość)
+> Fork GitHub CLI. Teraz: główny workspace Copilota. Przyszłość: integracja z panelem.
+
+**Repo:** `marekdkropiewnicki-dotcom/cli`
+**Branch:** `trunk`
+
+---
+
+### 🔮 Wizja długoterminowa (NIE TERAZ)
+> Zapisane żeby nie zgubić — wrócimy gdy będzie gotowa podstawa.
+
+- GeNCorE Token — własna kryptomoneta, dostęp do premium funkcji bota
+- GeNCorE jako AI dla monety — trading, analiza, doradztwo
+- Ekosystem: claude-remote-control ↔ GeNCorE ↔ cli/gh
+
+---
+
+## 🚦 Zasada pracy — JEDEN KROK NA RAZ
+
+```
+Aktualny focus → claude-remote-control (GeNCorE jest stabilny ✅)
+NIE robimy wszystkiego naraz
+NIE skaczemy do wizji długoterminowej
+```
+
+Jeśli Marek się gubi → pokaż tę mapę i zapytaj o jeden priorytet.
+
+---
+
+## 🗂️ O tym repo (cli)
+
+Fork oficjalnego GitHub CLI (`gh`), napisanego w Go.
+Służy jako **główny workspace** Copilota na iOS.
+
+- **Właściciel:** marekdkropiewnicki-dotcom
+- **Device:** iPhone 16 (iOS) — wszystkie sesje na iOS
+- **Branch:** `trunk`
+
+---
+
+## 👥 Team AI
 
 | Kto | Rola |
-|-----|------|
+|---|---|
 | 👨 Marek | Pomysłodawca, developer |
 | 🤖 GitHub Copilot | Kod, PR, GitHub, Chat |
 | 🧠 Claude (Anthropic) | Coding agent — włączony |
 | ⚡ Codex | Coding agent — włączony |
 
-## Subskrypcje
+---
 
-Wszystkie kluczowe serwisy są na płatnych planach:
+## 💳 Subskrypcje
 
 | Serwis | Plan |
-|--------|------|
+|---|---|
 | **GitHub** | Copilot Pro+ |
 | **Groq** | Pro |
 | **Hugging Face** | Pro |
@@ -45,51 +139,38 @@ Wszystkie kluczowe serwisy są na płatnych planach:
 | **Discord** | Pro |
 | **Gravatar** | Pro (opłacony przez WordPress) |
 
-## Copilot Setup
+---
 
-- **Plan:** Copilot Pro+
-- **Premium requests:** ~49.8% wykorzystane (reset 1. dnia miesiąca)
-- **Coding agents:** Copilot ✅ Claude ✅ Codex ✅
-- **Automatic code review:** ✅ Enabled
-- **Copilot Memory:** ✅ Enabled (Preview)
-- **MCP servers:** ✅ Enabled
-- **Copilot Spaces:** ✅ Enabled
-- **Copilot-generated commit messages:** ✅ Enabled
-- **AI model training:** ❌ Disabled (świadoma decyzja prywatności)
+## ⚙️ Copilot Setup
 
-## Copilot Spaces
+| Funkcja | Stan |
+|---|---|
+| Plan | Copilot Pro+ |
+| Premium requests | reset 2026-04-01 |
+| Coding agent — Copilot | ✅ Włączony |
+| Coding agent — Claude | ✅ Włączony |
+| Coding agent — Codex | ✅ Włączony |
+| Automatic code review | ✅ Enabled |
+| Copilot Memory | ✅ Enabled (Preview) |
+| MCP servers | ✅ Enabled |
+| Copilot Spaces | ✅ Enabled |
+| Copilot-generated commit messages | ✅ Enabled |
+| AI model training | ❌ Disabled (świadoma decyzja) |
 
-- **Space:** GentelmeN-CorE — aktywny
-- **Model:** Claude Opus 4.6 ✅
-- **Sources:** `marekdkropiewnicki-dotcom/GentelmeN-CorE` ✅
-- **Link:** https://github.com/copilot/spaces
-- **Instructions:**
+---
 
-```
-You are an AI coding assistant for the GeNCorE project — a Telegram bot written in Python.
+## 🌌 Copilot Spaces
 
-Stack:
-- AI chat: Groq (llama-3.3-70b-versatile, llama-3.1-8b-instant, qwen-2.5-32b)
-- Image generation: Hugging Face
-- Crypto: KuCoin via ccxt
-- Search: Brave Search API
-- Deployment: Railway
+| | |
+|---|---|
+| **Space** | GentelmeN-CorE |
+| **Model** | Claude Opus 4.6 |
+| **Sources** | `marekdkropiewnicki-dotcom/GentelmeN-CorE` |
+| **Link** | https://github.com/copilot/spaces |
 
-Focus on:
-- Python best practices
-- Telegram bot architecture (python-telegram-bot)
-- API integrations and error handling
-- Railway deployment optimization
+---
 
-Avoid:
-- Suggesting desktop tools (owner works on iPhone/iOS)
-- Overcomplicated solutions — keep it simple and clean
-- English responses — always respond in Polish 🇵🇱
-```
-
-## MCP Servers
-
-### Aktywne MCP (`mcp.json`)
+## 🔌 MCP Servers
 
 | Serwer | Typ | Endpoint / Package | Secrets |
 |---|---|---|---|
@@ -100,74 +181,64 @@ Avoid:
 | `telegram` | `stdio` | `mcp-telegram` | `TELEGRAM_API_ID`, `TELEGRAM_API_HASH` |
 | `discord` | `stdio` | `@scarecr0w12/discord-mcp` | `DISCORD_BOT_TOKEN` |
 
-### Brak MCP — obsługa alternatywna
+**Brak MCP:**
+- Railway → Railway app + Shellfish
+- Groq / KuCoin → bezpośrednie API w kodzie
 
-| Serwis | Powód | Alternatywa |
-|---|---|---|
-| **Railway** | Brak MCP w `mcp.json` | Railway app + Shellfish (iOS) 💡 |
-| **Groq** | Brak publicznego MCP | Bezpośrednie API w kodzie |
-| **KuCoin** | Brak publicznego MCP | Bezpośrednie API via ccxt |
+---
 
-### Czego Copilot nie ma
+## 📱 iOS Setup
 
-| Brak dostępu | Uwagi |
+| App | Rola |
 |---|---|
-| ❌ Copilot Spaces API | Preview — brak publicznego API |
-| ❌ Groq MCP | Brak oficjalnego MCP |
-| ❌ KuCoin MCP | Brak oficjalnego MCP |
-
-## Privacy
-
-- **Suggestions matching public code:** ✅ Allowed
-- **Allow data for product improvements:** ✅ Enabled (domyślne)
-- **Allow data for AI model training:** ❌ Disabled (świadoma decyzja)
-
-## Setup (iPhone iOS)
-
-> Trzy siostrzane appki (Source Remote, FTP Servers, S3 Servers) — ta sama idea, różne protokoły: zdalny zasób dostępny jak lokalny dysk w Files app.
-
-| App | Do czego |
-|-----|---------|
-| **GitHub app** | Przeglądanie repo, Copilot Chat ✅ główny |
-| **Working Copy** | Git (commit, push, pull) ✅ główny |
-| **Textastic** | Edytor kodu ✅ główny |
-| **Shellfish** | Terminal SSH na iOS 🔥 |
-| **Railway app** | Deployment, logi Railway ✅ |
-| **Code app** | Edytor kodu (alternatywa dla Textastic) |
-| **FTP Servers** | Dostęp do serwerów FTP/SFTP bezpośrednio w Files app — jak lokalny dysk |
-| **S3 Servers** | Dostęp do bucketów AWS/S3 bezpośrednio w Files app — jak lokalny dysk |
-| **Source Remote** | Dostęp do repo Git (GitHub, GitLab, Gitea, BitBucket) w Files app bez klonowania |
-| **Station** | TBD |
+| **GitHub app** | Przeglądanie repo, Copilot Chat |
+| **Working Copy** | Git: commit, push, pull |
+| **Textastic** | Edytor kodu |
+| **Shellfish** | Terminal SSH 🔥 |
+| **Railway app** | Deployment, logi |
+| **Code app** | Edytor kodu (alternatywa) |
+| **Source Remote** | Repo Git w Files app |
+| **FTP Servers** | FTP/SFTP w Files app |
+| **S3 Servers** | AWS/S3 w Files app |
 | **Brave** | Przeglądarka |
 
-- ⚠️ GitHub app czasem wyrzuca sesję — po powrocie wracamy do `cli` repo jako kontekst
-- 💡 Railway app + Shellfish = dostęp do Railway bez MCP!
+---
 
-## Zasady współpracy
+## 🤝 Zasady współpracy
 
 - Komunikacja po **polsku** 🇵🇱
-- Krótkie, konkretne odpowiedzi — bez zbędnego gadania
-- Zawsze pytaj o jeden wybór na raz — nie przytłaczaj opcjami
-- Pamiętaj że pracujemy na iPhone — nie sugeruj narzędzi desktopowych
-- Główna gałąź: `trunk`
+- Krótkie, konkretne odpowiedzi
+- **Jeden krok na raz** — nie przytłaczaj opcjami
+- Pracujemy na iPhone — zero narzędzi desktopowych
+- Jeśli Marek się gubi → wróć do mapy projektów
 
-## Session History
+---
+
+## 📋 Session History
 
 ### 2026-03-05
-- Workspace `cli` skonfigurowany jako główny kontekst Copilota
-- GeNCorE aktywny (PR #7 otwarty — naming, HF 410, voice routing)
-- Copilot Pro+ skonfigurowany: agents (Copilot + Claude + Codex), Memory, MCP, Spaces ✅
-- Space GentelmeN-CorE: model Claude Opus 4.6, instructions dodane ✅, sources dodane ✅
-- MCP zbadane: Railway/HF/Telegram/Brave ✅ | Groq/KuCoin ❌ (brak MCP)
-- Pełny arsenał iOS: GitHub, Working Copy, Textastic, Shellfish, Railway app, Code, FTP Servers, S3 Servers, Source Remote, Station, Brave
-- Subskrypcje zapisane: GitHub/Groq/HF/Railway/Telegram/KuCoin/Brave/Discord/Gravatar — wszystkie Pro ✅
-- Opisy siostrzanych appek (Source Remote, FTP Servers, S3 Servers) zaktualizowane ✅
+- Workspace `cli` skonfigurowany jako główny kontekst Copilota ✅
+- GeNCorE aktywny, Copilot Pro+ skonfigurowany ✅
 
 ### 2026-03-06
-- `.github/mcp.json` stworzony ✅
-- MCP skonfigurowane: github ✅ | brave-search ✅ | huggingface ✅ | context7 ✅ | telegram ✅ | discord ✅
-- Railway — brak MCP, obsługa via Railway app + Shellfish (iOS) 💡
-- Groq/KuCoin — brak MCP, bezpośrednie API w kodzie
-- `NOTES.md` — posprzątany, spójny, estetyczny ✅
-- `copilot-instructions.md` — zaktualizowany i zsynchronizowany z `mcp.json` ✅
-- Sync zweryfikowany (2026-03-06)
+- `.github/mcp.json` stworzony, 6 serwerów MCP ✅
+- `copilot-instructions.md` + `NOTES.md` scalone ✅
+
+### 2026-03-09
+- Repo GentelmeN-CorE upublicznione ✅
+- 5 pustych WIP PRów zamkniętych ✅
+
+### 2026-03-13
+- PR #14 (Codex) zmergowany — performance fixes ✅
+
+### 2026-04-01
+- Premium requests zresetowane — 100% ✅
+- Bug #1 `/rysuj` naprawiony: SDXL → FLUX.1-schnell (`ac1f084`) ✅
+- Bug #2 voice→/rysuj — zweryfikowany, już działał ✅
+- 5 branchy `copilot/*` w GeNCorE → ✅ Usunięte przez Marka
+- claude-remote-control: PR #1 (Claude) + PR #2 (Copilot) — Draft ⏳
+- Wizja ekosystemu: GeNCorE + claude-remote-control + cli ✅
+- Mapa projektów + zasada "jeden krok na raz" wdrożona 🗺️ ✅
+- GeNCorE stabilny — focus przechodzi na claude-remote-control 🎯
+- GeNCorE skrupulatnie przejrzany: 1 branch ✅, 0 otwartych PRów ✅, ostatni commit `259f6bb` ✅
+- root `copilot-instructions.md` zsynchronizowany z `.github/copilot-instructions.md` ✅
