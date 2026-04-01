@@ -6,10 +6,10 @@
 
 | | |
 |---|---|
-| 📅 **Data** | 2026-04-01 |
+| 📅 **Data ostatniego sync** | 2026-04-01 |
 | 📱 **Urządzenie** | iPhone 16 — tylko iOS |
-| 🌿 **Branch** | `trunk` |
-| 🟢 **Stan** | Zsynchronizowane |
+| 🌿 **Branch (cli)** | `trunk` |
+| 🟢 **Stan** | Zsynchronizowane ✅ |
 
 **MCP:** `github` ✅ `brave-search` ✅ `huggingface` ✅ `context7` ✅ `telegram` ✅ `discord` ✅
 **Railway** → Railway app + Shellfish 💡 | **Groq / KuCoin** → bezpośrednie API w kodzie
@@ -24,17 +24,20 @@
 > Telegram bot na Railway. Fundament wszystkiego.
 
 **Repo:** `marekdkropiewnicki-dotcom/GentelmeN-CorE`
+**Branch główny:** `GentelmeN@CorE`
 
-🔴 **Aktywne bugi:**
-- `/rysuj` — 410 error (kod używa SDXL zamiast FLUX.1-schnell) ❌
-- Voice → `/rysuj` routing nie działa ❌
+🟢 **Bugi:**
+- `/rysuj` — 410 error → ✅ Naprawiony (SDXL → FLUX.1-schnell, commit `ac1f084`)
+- Voice → `/rysuj` routing → ✅ Już działało (zweryfikowane)
 
-🌿 **Branche czekające na merge:**
-- `copilot/add-multilanguage-support` — es, de, fr, ru, uk, zh
-- `copilot/fix-authorization-database-leaks` — bezpieczeństwo DB
-- `copilot/fix-markdown-parse-error` — fix błędu Markdown
-- `copilot/refactor-bot-file-into-modules` — refaktor struktury
-- `copilot/set-up-copilot-instructions` — setup instrukcji
+🌿 **Branche:**
+- Wszystkie 5 branchy `copilot/*` → do usunięcia przez Marka w GitHub UI
+- Link: https://github.com/marekdkropiewnicki-dotcom/GentelmeN-CorE/branches
+- Kod ze wszystkich branchy już jest w `GentelmeN@CorE` ✅
+
+🎯 **Następny krok w GeNCorE:**
+- Usunąć 5 starych branchy przez GitHub UI (nie można programatycznie)
+- GeNCorE jest stabilny — można deployować
 
 ---
 
@@ -93,7 +96,7 @@ NEXT_PUBLIC_REPO_NAME=GentelmeN-CorE
 ## 🚦 Zasada pracy — JEDEN KROK NA RAZ
 
 ```
-Aktualny focus → GeNCorE bugi LUB claude-remote-control PRy
+Aktualny focus → claude-remote-control (GeNCorE jest stabilny ✅)
 NIE robimy wszystkiego naraz
 NIE skaczemy do wizji długoterminowej
 ```
@@ -107,7 +110,7 @@ Jeśli Marek się gubi → pokaż tę mapę i zapytaj o jeden priorytet.
 Fork oficjalnego GitHub CLI (`gh`), napisanego w Go.
 Służy jako **główny workspace** Copilota na iOS.
 
-- **Właściciel:** marekdkropiewnicki-dotcom
+- **Właściciel:** marekdkropiewnicki-dotropiewnicki-dotcom
 - **Device:** iPhone 16 (iOS) — wszystkie sesje na iOS
 - **Branch:** `trunk`
 
@@ -145,7 +148,7 @@ Służy jako **główny workspace** Copilota na iOS.
 | Funkcja | Stan |
 |---|---|
 | Plan | Copilot Pro+ |
-| Premium requests | 100% (reset 2026-04-01) |
+| Premium requests | reset 2026-04-01 |
 | Coding agent — Copilot | ✅ Włączony |
 | Coding agent — Claude | ✅ Włączony |
 | Coding agent — Codex | ✅ Włączony |
@@ -164,7 +167,7 @@ Służy jako **główny workspace** Copilota na iOS.
 |---|---|
 | **Space** | GentelmeN-CorE |
 | **Model** | Claude Opus 4.6 |
-| **Sources** | `marekdkropiewnicki-dotcom/GentelmeN-CorE` |
+| **Sources** | `marekdkropiewnicki-dotropiewnicki-dotcom/GentelmeN-CorE` |
 | **Link** | https://github.com/copilot/spaces |
 
 ---
@@ -216,9 +219,8 @@ Służy jako **główny workspace** Copilota na iOS.
 ## 📋 Session History
 
 ### 2026-03-05
-- Workspace `cli` skonfigurowany jako główny kontekst Copilota
-- GeNCorE aktywny (PR #7 — naming, HF 410, voice routing) ✅
-- Copilot Pro+ skonfigurowany: agents, Memory, MCP, Spaces ✅
+- Workspace `cli` skonfigurowany jako główny kontekst Copilota ✅
+- GeNCorE aktywny, Copilot Pro+ skonfigurowany ✅
 
 ### 2026-03-06
 - `.github/mcp.json` stworzony, 6 serwerów MCP ✅
@@ -227,15 +229,16 @@ Służy jako **główny workspace** Copilota na iOS.
 ### 2026-03-09
 - Repo GentelmeN-CorE upublicznione ✅
 - 5 pustych WIP PRów zamkniętych ✅
-- Copilot premium limit wyczerpany ✅
 
 ### 2026-03-13
 - PR #14 (Codex) zmergowany — performance fixes ✅
 
 ### 2026-04-01
 - Premium requests zresetowane — 100% ✅
-- Pełny sync + audyt projektu ✅
-- Nowe repo `claude-remote-control` uruchomione ✅
-- Wizja ekosystemu ustalona: GeNCorE + claude-remote-control + cli ✅
-- Mapa projektów dodana do instrukcji — Marek się nie gubi 🗺️ ✅
-- Wizja długoterminowa: GeNCorE Token (zapisane, NIE teraz) 🔮
+- Bug #1 `/rysuj` naprawiony: SDXL → FLUX.1-schnell (`ac1f084`) ✅
+- Bug #2 voice→/rysuj — zweryfikowany, już działał ✅
+- 5 branchy `copilot/*` — do usunięcia przez Marka (GitHub UI) ⏳
+- claude-remote-control: PR #1 (Claude) + PR #2 (Copilot) — Draft ⏳
+- Wizja ekosystemu: GeNCorE + claude-remote-control + cli ✅
+- Mapa projektów + zasada "jeden krok na raz" wdrożona 🗺️ ✅
+- GeNCorE stabilny — focus przechodzi na claude-remote-control 🎯
