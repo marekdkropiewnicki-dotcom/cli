@@ -31,13 +31,11 @@
 - Voice → `/rysuj` routing → ✅ Już działało (zweryfikowane)
 
 🌿 **Branche:**
-- Wszystkie 5 branchy `copilot/*` → do usunięcia przez Marka w GitHub UI
-- Link: https://github.com/marekdkropiewnicki-dotcom/GentelmeN-CorE/branches
-- Kod ze wszystkich branchy już jest w `GentelmeN@CorE` ✅
+- Tylko 1 branch: `GentelmeN@CorE` ✅
+- 5 branchy `copilot/*` → ✅ Usunięte przez Marka (2026-04-01)
 
-🎯 **Następny krok w GeNCorE:**
-- Usunąć 5 starych branchy przez GitHub UI (nie można programatycznie)
-- GeNCorE jest stabilny — można deployować
+🎯 **Stan GeNCorE:**
+- Stabilny, produkcja działa ✅
 
 ---
 
@@ -110,7 +108,7 @@ Jeśli Marek się gubi → pokaż tę mapę i zapytaj o jeden priorytet.
 Fork oficjalnego GitHub CLI (`gh`), napisanego w Go.
 Służy jako **główny workspace** Copilota na iOS.
 
-- **Właściciel:** marekdkropiewnicki-dotropiewnicki-dotcom
+- **Właściciel:** marekdkropiewnicki-dotcom
 - **Device:** iPhone 16 (iOS) — wszystkie sesje na iOS
 - **Branch:** `trunk`
 
@@ -167,7 +165,7 @@ Służy jako **główny workspace** Copilota na iOS.
 |---|---|
 | **Space** | GentelmeN-CorE |
 | **Model** | Claude Opus 4.6 |
-| **Sources** | `marekdkropiewnicki-dotropiewnicki-dotcom/GentelmeN-CorE` |
+| **Sources** | `marekdkropiewnicki-dotcom/GentelmeN-CorE` |
 | **Link** | https://github.com/copilot/spaces |
 
 ---
@@ -237,7 +235,7 @@ Służy jako **główny workspace** Copilota na iOS.
 - Premium requests zresetowane — 100% ✅
 - Bug #1 `/rysuj` naprawiony: SDXL → FLUX.1-schnell (`ac1f084`) ✅
 - Bug #2 voice→/rysuj — zweryfikowany, już działał ✅
-- 5 branchy `copilot/*` — do usunięcia przez Marka (GitHub UI) ⏳
+- 5 branchy `copilot/*` w GeNCorE → ✅ Usunięte przez Marka
 - claude-remote-control: PR #1 (Claude) + PR #2 (Copilot) — Draft ⏳
 - Wizja ekosystemu: GeNCorE + claude-remote-control + cli ✅
 - Mapa projektów + zasada "jeden krok na raz" wdrożona 🗺️ ✅
