@@ -6,7 +6,7 @@
 
 | | |
 |---|---|
-| 📅 **Data** | 2026-03-06 |
+| 📅 **Data** | 2026-04-01 |
 | 📱 **Urządzenie** | iPhone 16 — tylko iOS |
 | 🌿 **Branch** | `trunk` |
 | 🟢 **Stan** | Wszystko gotowe i zsynchronizowane |
@@ -35,12 +35,29 @@ Jest to fork oficjalnego GitHub CLI (`gh`), napisanego w Go.
 
 | Komponent | Technologia |
 |---|---|
-| Telegram bot | Python (`python-telegram-bot`) |
+| Telegram bot | Python (`pyTelegramBotAPI`) |
 | AI chat | Groq (`llama-3.3-70b-versatile`, `llama-3.1-8b-instant`, `qwen-2.5-32b`) |
-| Generowanie obrazów | Hugging Face |
+| Generowanie obrazów | Hugging Face (FLUX.1-schnell) |
 | Kryptowaluty | KuCoin via `ccxt` |
 | Wyszukiwanie | Brave Search API |
-| Deployment | Railway |
+| Deployment | Railway Pro |
+
+### 🔴 Aktywne bugi
+
+| # | Bug | Status |
+|---|---|---|
+| 1 | `/rysuj` — 410 error (SDXL zamiast FLUX.1-schnell w kodzie) | ❌ Nienaprawiony |
+| 2 | Voice → `/rysuj` routing nie działa | ❌ Nienaprawiony |
+
+### 🌿 Branche do review/merge
+
+| Branch | Co robi |
+|---|---|
+| `copilot/add-multilanguage-support` | es, de, fr, ru, uk, zh |
+| `copilot/fix-authorization-database-leaks` | bezpieczeństwo DB |
+| `copilot/fix-markdown-parse-error` | fix błędu Markdown |
+| `copilot/refactor-bot-file-into-modules` | refaktor struktury |
+| `copilot/set-up-copilot-instructions` | setup instrukcji |
 
 ---
 
@@ -76,7 +93,7 @@ Jest to fork oficjalnego GitHub CLI (`gh`), napisanego w Go.
 | Funkcja | Stan |
 |---|---|
 | Plan | Copilot Pro+ |
-| Premium requests | ~49.8% wykorzystane (reset 1. dnia miesiąca) |
+| Premium requests | 100% (reset 2026-04-01) |
 | Coding agent — Copilot | ✅ Włączony |
 | Coding agent — Claude | ✅ Włączony |
 | Coding agent — Codex | ✅ Włączony |
@@ -105,14 +122,14 @@ You are an AI coding assistant for the GeNCorE project — a Telegram bot writte
 
 Stack:
 - AI chat: Groq (llama-3.3-70b-versatile, llama-3.1-8b-instant, qwen-2.5-32b)
-- Image generation: Hugging Face
+- Image generation: Hugging Face (FLUX.1-schnell)
 - Crypto: KuCoin via ccxt
 - Search: Brave Search API
 - Deployment: Railway
 
 Focus on:
 - Python best practices
-- Telegram bot architecture (python-telegram-bot)
+- Telegram bot architecture (pyTelegramBotAPI)
 - API integrations and error handling
 - Railway deployment optimization
 
@@ -202,10 +219,18 @@ Avoid:
 - Struktura `.github/` uporządkowana ✅
 
 ### 2026-03-09
-
 - Repo GentelmeN-CorE upublicznione ✅
 - 5 pustych WIP PRów (#8–#12) zamkniętych, branche usunięte ✅
 - Root cause PRów: Railway log error (nie był błędem kodu) ✅
 - Copilot premium limit wyczerpany — agenci zatrzymani ✅
 - Przegląd inspiracji: freeCodeCamp, gh cli fork, first-contributions ✅
 - Wizja: GeNCorE → suwerenna AI (RAG, orkiestracja, autonomia) 🎯
+
+### 2026-04-01
+- Premium requests zresetowane — 100% dostępne ✅
+- Pełny sync projektu przeprowadzony ✅
+- Audyt kodu GeNCorE: wszystkie pliki przejrzane ✅
+- PR #14 (Codex — performance fixes) zmergowany 2026-03-13 ✅
+- Aktywne bugi: `/rysuj` (SDXL→FLUX.1-schnell) + voice→/rysuj routing ❌
+- 5 branchy Copilot czeka na review/merge ⏳
+- Oba pliki copilot-instructions.md zaktualizowane i zsynchronizowane ✅
