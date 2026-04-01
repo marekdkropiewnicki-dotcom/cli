@@ -49,7 +49,7 @@ Jest to fork oficjalnego GitHub CLI (`gh`), napisanego w Go.
 | 1 | `/rysuj` — 410 error (SDXL zamiast FLUX.1-schnell w kodzie) | ❌ Nienaprawiony |
 | 2 | Voice → `/rysuj` routing nie działa | ❌ Nienaprawiony |
 
-### 🌿 Branche do review/merge
+### 🌿 Branche do review/merge (GeNCorE)
 
 | Branch | Co robi |
 |---|---|
@@ -58,6 +58,46 @@ Jest to fork oficjalnego GitHub CLI (`gh`), napisanego w Go.
 | `copilot/fix-markdown-parse-error` | fix błędu Markdown |
 | `copilot/refactor-bot-file-into-modules` | refaktor struktury |
 | `copilot/set-up-copilot-instructions` | setup instrukcji |
+
+---
+
+## 🌐 Projekt: claude-remote-control
+
+**Repo:** `marekdkropiewnicki-dotcom/claude-remote-control`
+**Live:** https://claude-remote-control-gilt.vercel.app
+**Stack:** Next.js + Tailwind CSS + Vercel
+**Cel:** AI Agent Command Center — panel sterowania agentami z każdego miejsca (iPhone, desktop)
+
+### 💡 Wizja (ustalona 2026-04-01)
+
+Marek korzysta z Claude wszędzie → panel musi być **hybrydą**:
+
+| Zakładka | Co robi |
+|---|---|
+| 💬 **Chat** | Rozmowa z Claude AI (zbudowane przez Claude — PR #1) |
+| 🤖 **Agenci** | Zlecaj zadania Copilot / Claude / Codex |
+| 🔀 **PR-y** | Przeglądaj i merguj PR-y GeNCorE |
+
+### 📋 Stan PRów (2026-04-01)
+
+| PR | Agent | Co zbudował | Status |
+|---|---|---|---|
+| #1 | Claude | Chat z Claude AI (Next.js 15, CSS Modules) | Draft ⏳ |
+| #2 | Copilot | Command Center (Next.js 14, Tailwind, dark theme) | Draft ⏳ |
+
+### 🎯 Plan (następna sesja)
+1. Merge PR #1 (Claude) → `main` jako fundament
+2. Nowy PR — rozbudowa o zakładki Agenci + PR-y
+3. Dodać env vars w Vercel: `GITHUB_TOKEN`, `ADMIN_TOKEN`, `NEXT_PUBLIC_REPO_OWNER`, `NEXT_PUBLIC_REPO_NAME`
+
+### ⚙️ Zmienne środowiskowe (Vercel)
+
+```
+GITHUB_TOKEN=
+ADMIN_TOKEN=
+NEXT_PUBLIC_REPO_OWNER=marekdkropiewnicki-dotcom
+NEXT_PUBLIC_REPO_NAME=GentelmeN-CorE
+```
 
 ---
 
@@ -232,5 +272,7 @@ Avoid:
 - Audyt kodu GeNCorE: wszystkie pliki przejrzane ✅
 - PR #14 (Codex — performance fixes) zmergowany 2026-03-13 ✅
 - Aktywne bugi: `/rysuj` (SDXL→FLUX.1-schnell) + voice→/rysuj routing ❌
-- 5 branchy Copilot czeka na review/merge ⏳
-- Oba pliki copilot-instructions.md zaktualizowane i zsynchronizowane ✅
+- 5 branchy Copilot czeka na review/merge ⏳ (GeNCorE)
+- Nowe repo: `claude-remote-control` — AI Agent Command Center ✅
+- claude-remote-control: 2 PRy (Claude #1 + Copilot #2) — oba Draft ⏳
+- Wizja ustalona: Chat (Claude) + Agenci + PR-y w jednym panelu 🎯
