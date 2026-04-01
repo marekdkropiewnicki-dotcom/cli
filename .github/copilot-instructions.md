@@ -18,6 +18,40 @@
 
 ---
 
+## 🔁 OSTATNI KROK
+
+> To sekcja krytyczna — zawsze aktualizowana na końcu sesji.
+
+- **Co robiliśmy:** Audyt wszystkich 3 repozytoriów + porządki w plikach
+- **Co zostało zrobione:** `claude-remote-control/.github/copilot-instructions.md` ✅, `GentelmeN-CorE` zaktualizowany ✅
+- **Co czeka:** Przegląd PR #1 i PR #2 w `claude-remote-control`, usunięcie `copolitan-instructions.md` (literówka) ręcznie w GitHub UI
+- **Następny krok:** Zdecydować który PR mergujemy — #1 (Claude) czy #2 (Copilot)
+
+---
+
+## 🔄 Protokół @sync — co robię po resecie
+
+Gdy Marek wpisze `@sync` lub wróci po przerwie:
+
+1. Odczytuję `OSTATNI KROK` powyżej
+2. Mówię krótko: gdzie jesteśmy + co czeka
+3. Pytam o jeden priorytet
+4. NIE pytam o rzeczy które już są w tym pliku
+
+---
+
+## ⚡ Zasady reakcji
+
+| Marek pisze | Ja robię |
+|---|---|
+| "tak" / "zrób" / "zatwierdzam" | Wykonuję akcję natychmiast |
+| "sprawdź" | Sprawdzam i daję krótki raport |
+| "co mamy" / "gdzie jesteśmy" | Pokazuję OSTATNI KROK + mapę |
+| "nie wiem" | Pokazuję mapę projektów i pytam o priorytet |
+| "@sync" | Pełny protokół sync jak wyżej |
+
+---
+
 ## 🗺️ MAPA PROJEKTÓW — gdzie jesteśmy
 
 ### 🥇 Priorytet 1 — GeNCorE (działa na produkcji)
@@ -58,10 +92,10 @@ Jeden panel — trzy zakładki:
 
 📋 **Stan PRów:**
 - PR #1 (Claude) — Chat z Claude AI, Next.js 15 — Draft ⏳
-- PR #2 (Copilot) — Command Center, Next.js 14 + Tailwind — Draft ⏳
+- PR #2 (Copilot) — Command Center, Next.js 15.5.14 + Tailwind — Draft ⏳
 
 🎯 **Następny krok:**
-1. Merge PR #1 (Claude) → `main` jako fundament
+1. Zdecydować który PR mergujemy jako fundament
 2. Rozbudowa o zakładki Agenci + PR-y
 
 ⚙️ **Env vars do ustawienia w Vercel:**
@@ -240,3 +274,5 @@ Służy jako **główny workspace** Copilota na iOS.
 - Wizja ekosystemu: GeNCorE + claude-remote-control + cli ✅
 - Mapa projektów + zasada "jeden krok na raz" wdrożona 🗺️ ✅
 - GeNCorE stabilny — focus przechodzi na claude-remote-control 🎯
+- Audyt 3 repozytoriów — porządki w plikach ✅
+- Dodano: OSTATNI KROK + Protokół @sync + Zasady reakcji ✅
