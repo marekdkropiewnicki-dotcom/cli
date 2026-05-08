@@ -1,5 +1,4 @@
 # AGENTS.md
-
 This is the GitHub CLI (`gh`), a command-line tool for interacting with GitHub. The module path is `github.com/cli/cli/v2`.
 
 ## Build, Test, and Lint
@@ -172,9 +171,3 @@ client.REST(hostname, "GET", "repos/owner/repo", nil, &data)
 For host resolution, use `cfg.Authentication().DefaultHost()` — not `ghinstance.Default()` which always returns `github.com`.
 
 ## Cursor Cloud specific instructions
-
-- **No external services required.** This is a pure Go CLI - no databases, Docker, or background processes needed.
-- **Known test flakiness:** `pkg/surveyext` tests fail in non-TTY environments due to ANSI color code expectations. This is a pre-existing issue unrelated to your changes - ignore those failures.
-- **Build/test/lint commands** are documented above in "Build, Test, and Lint". Use `make` to build, `go test ./...` to test, `make lint` to lint.
-- **Full test suite takes ~10 minutes.** For faster feedback, target specific packages: `go test ./pkg/cmd/<command>/...`
-- **The built binary** is at `bin/gh` after running `make`. It is already authenticated via `gh auth` in this environment and can be used to interact with GitHub directly (e.g. `./bin/gh issue list --repo cli/cli`).
