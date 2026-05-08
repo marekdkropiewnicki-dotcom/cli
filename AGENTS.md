@@ -171,17 +171,3 @@ client.REST(hostname, "GET", "repos/owner/repo", nil, &data)
 For host resolution, use `cfg.Authentication().DefaultHost()` — not `ghinstance.Default()` which always returns `github.com`.
 
 ## Cursor Cloud specific instructions
-
-This is a pure Go CLI with no external service dependencies (no databases, Docker, or message brokers). The update script handles `go mod download` and golangci-lint installation.
-
-### Running services
-
-- **Build**: `make` (outputs `bin/gh`)
-- **Tests**: `go test ./...` (takes ~10 minutes for the full suite; use `go test ./pkg/cmd/<command>/...` for fast targeted runs)
-- **Lint**: `make lint` (runs golangci-lint v2.11.0)
-
-### Known environment quirks
-
-- Tests in `pkg/surveyext` fail in non-TTY environments (ANSI color code mismatch). These are environment-specific and not code bugs - they pass in CI where a pseudo-TTY is available.
-- Acceptance tests (`go test -tags acceptance ./acceptance`) require a real GitHub token (`GH_ACCEPTANCE_TOKEN`) and are skipped in normal `go test ./...` runs.
-- The built binary at `bin/gh` can make unauthenticated GitHub API requests (e.g., `./bin/gh api repos/cli/cli`) without needing `gh auth login`.
