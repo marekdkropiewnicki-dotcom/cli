@@ -1,5 +1,4 @@
 # AGENTS.md
-
 This is the GitHub CLI (`gh`), a command-line tool for interacting with GitHub. The module path is `github.com/cli/cli/v2`.
 
 ## Build, Test, and Lint
