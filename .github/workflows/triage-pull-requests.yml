@@ -14,7 +14,7 @@ jobs:
     if: >-
       github.event_name == 'pull_request_target' &&
       (github.event.action == 'opened' || github.event.action == 'reopened')
-    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-label-external-pr.yml@main
+    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-label-external-pr.yml@802871bedef14b9e87bef9a82d606e1b26bcdaf4 # main
     permissions:
       issues: write
       pull-requests: write
@@ -24,7 +24,7 @@ jobs:
     if: >-
       github.event_name == 'pull_request_target' &&
       github.event.action == 'opened'
-    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-close-from-default-branch.yml@main
+    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-close-from-default-branch.yml@802871bedef14b9e87bef9a82d606e1b26bcdaf4 # main
     with:
       default_branch: trunk
     permissions:
@@ -35,7 +35,7 @@ jobs:
       github.event_name == 'schedule' ||
       (github.event_name == 'pull_request_target' &&
       (github.event.action == 'opened' || github.event.action == 'reopened' || github.event.action == 'edited' || github.event.action == 'ready_for_review'))
-    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-pr-requirements.yml@main
+    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-pr-requirements.yml@802871bedef14b9e87bef9a82d606e1b26bcdaf4 # main
     with:
       enable_pr_screening: true
       days_until_close: 4
@@ -48,7 +48,7 @@ jobs:
     if: >-
       github.event_name == 'pull_request_target' &&
       github.event.action == 'labeled'
-    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-close-no-help-wanted.yml@main
+    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-close-no-help-wanted.yml@802871bedef14b9e87bef9a82d606e1b26bcdaf4 # main
     permissions:
       pull-requests: write
 
@@ -56,6 +56,6 @@ jobs:
     if: >-
       github.event_name == 'pull_request_target' &&
       github.event.action == 'labeled'
-    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-ready-for-review.yml@main
+    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-ready-for-review.yml@802871bedef14b9e87bef9a82d606e1b26bcdaf4 # main
     permissions:
       pull-requests: write
