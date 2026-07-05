@@ -15,7 +15,7 @@ jobs:
   discuss:
     if: github.event.action == 'labeled' && github.event.label.name == 'discuss'
     uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-discuss.yml@802871bedef14b9e87bef9a82d606e1b26bcdaf4 # main
-            with:
+    with:
       target_repo: 'github/cli'
       cc_team: '@github/cli'
       environment: cli-discuss-automation
