@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: '0 4 * * *' # Daily at 4 AM UTC — close unmet-requirements PRs
 
+concurrency:
+  group: pr-triage-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   label-external:
     if: >-
@@ -28,19 +32,9 @@ jobs:
 
   check-requirements:
     if: >-
-      github.event_name == 'pull_request_target' &&
-      (github.event.action == 'opened' || github.event.action == 'reopened' || github.event.action == 'edited' || github.event.action == 'ready_for_review')
-    uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-pr-requirements.yml@main
-    with:
-      enable_pr_screening: true
-      days_until_close: 4
-      large_pr_days_until_close: 2
-    permissions:
-      issues: read
-      pull-requests: write
-
-  close-unmet-requirements:
-    if: github.event_name == 'schedule'
+      github.event_name == 'schedule' ||
+      (github.event_name == 'pull_request_target' &&
+      (github.event.action == 'opened' || github.event.action == 'reopened' || github.event.action == 'edited' || github.event.action == 'ready_for_review'))
     uses: desktop/gh-cli-and-desktop-shared-workflows/.github/workflows/triage-pr-requirements.yml@main
     with:
       enable_pr_screening: true
