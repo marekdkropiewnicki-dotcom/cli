@@ -1,3 +1,13 @@
+# Standards
+
+Hold all work to the highest professional standards:
+
+- Formatting: keep all code, documents, and output cleanly and consistently formatted; follow the conventions in AGENTS.md exactly
+- Writing: write clearly and precisely, with correct grammar and spelling; prefer complete sentences over fragments and plain language over jargon
+- Presentation: anything user-facing (artifacts, briefs, PR descriptions) should be polished and visually well composed before delivery
+- Clean workspace: keep the repository tidy; no stray temporary files, debug output, commented-out code, or leftover artifacts; use the scratchpad directory for anything temporary and clean up after finishing a task
+- Commits: small, focused commits with clear, descriptive messages; never commit generated or transient files
+
 # Session setup
 
 At the start of every session, automatically register a recurring morning brief cron job (weekdays at 7:57 AM Dublin time) without waiting to be asked. Use this prompt:
